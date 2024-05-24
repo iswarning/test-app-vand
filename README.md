@@ -11,16 +11,16 @@ php artisan db:seed
 php artisan key:generate
 
 ## Creating a Personal Access Client to Login
-# Path for login: "/api/auth/login" POST
+### Path for login: "/api/auth/login" POST
 php artisan passport:client --personal
 
 ## Then copy access client id and access client secret from terminal set to env file
-PASSPORT_PERSONAL_ACCESS_CLIENT_ID="client-id-value"
-PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="unhashed-client-secret-value"
+#### PASSPORT_PERSONAL_ACCESS_CLIENT_ID="client-id-value"
+#### PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="unhashed-client-secret-value"
 
 ## After login you will have token to access api resource
-# List path for api resource:
-- Store Manage
+### List path for api resource:
+#### Store Manage
 + "/api/auth/stores/list"         GET
 + "/api/auth/stores/detail/{id}"  GET     params( id )
 + "/api/auth/stores/search"       POST    params( keyWord )
@@ -28,7 +28,7 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="unhashed-client-secret-value"
 + "/api/auth/stores/update/{id}"  PUT     params( id )
 + "/api/auth/stores/delete/{id}"  DELETE  params( id )
 
-- Product Manage
+#### Product Manage
 + "/api/auth/products/list"         GET     
 + "/api/auth/products/detail/{id}"  GET     params( id )
 + "/api/auth/products/search"       POST    params( keyWord )
@@ -36,4 +36,4 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET="unhashed-client-secret-value"
 + "/api/auth/products/update/{id}"  PUT     params( id, store_id, name, description, price )
 + "/api/auth/products/delete/{id}"  DELETE  params( id )
 
-### Thanks for reading
+## Thanks for reading
